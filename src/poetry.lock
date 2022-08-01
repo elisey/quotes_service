@@ -41,7 +41,7 @@ tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>
 name = "certifi"
 version = "2022.6.15"
 description = "Python package for providing Mozilla's CA Bundle."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 
@@ -316,7 +316,7 @@ standard = ["websockets (>=10.0)", "httptools (>=0.4.0)", "watchfiles (>=0.13)",
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "1fa9925f4e343b5f3fa4ac687e5b25583ae287907fc9a0b6577e5e6167caf98d"
+content-hash = "6a2a015948f78859d42d70e306be59869bf340539d4b5c5d8e097567c7360a71"
 
 [metadata.files]
 anyio = [
