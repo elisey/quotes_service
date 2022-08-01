@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  backend:
+      build:
+        context: ''
+        dockerfile: docker/Dockerfile
+      container_name: quotes_service
+      ports:
+        - "8889:8000"
