@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.9'
 services:
   backend:
       build:
@@ -7,3 +7,10 @@ services:
       container_name: quotes_service
       ports:
         - "8889:8000"
+      networks:
+        - vpc
+
+
+networks:
+  vpc:
+    name: ithappens-bot-network
