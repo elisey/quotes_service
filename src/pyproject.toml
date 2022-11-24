@@ -6,16 +6,37 @@ authors = ["Elisei"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-pydantic = {extras = ["dotenv"], version = "^1.9.1"}
-fastapi = "^0.79.0"
-uvicorn = {extras = ["standart"], version = "^0.18.2"}
-orjson = "^3.7.11"
-certifi = "^2022.6.15"
+pydantic = "^1.10.2"
+fastapi = "^0.87.0"
+orjson = "^3.8.2"
+certifi = "^2022.9.24"
+uvicorn = "^0.20.0"
+python-dotenv = "^0.21.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.2"
 requests = "^2.28.1"
-pytest-asyncio = "^0.19.0"
+pytest-asyncio = "^0.20.2"
+mypy = "^0.991"
+isort = "^5.10.1"
+flake8 = "^6.0.0"
+black = "^22.10.0"
+httpx = "^0.23.1"
+
+[tool.mypy]
+strict = true
+ignore_missing_imports = true
+
+[tool.black]
+line-length = 120
+target_version = ['py310']
+
+[tool.isort]
+profile = "django"
+lines_after_imports = 2
+skip = ".venvs/"
+line_length = 120
+src_paths = ["app"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

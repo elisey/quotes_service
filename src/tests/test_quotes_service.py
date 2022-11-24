@@ -13,10 +13,10 @@ def service(test_quotes_dir):
 @pytest.mark.parametrize(
     "item_id,expected_text",
     [
-        (1, 'Это тестовая цитата'),
-        (2, 'More test quote'),
-        (4, 'Третьей цитаты нет'),
-    ]
+        (1, "Это тестовая цитата"),
+        (2, "More test quote"),
+        (4, "Третьей цитаты нет"),
+    ],
 )
 async def test_get_item_by_id(service, item_id, expected_text):
     quote = await service.get_by_id(item_id)
@@ -30,7 +30,7 @@ async def test_get_item_by_id(service, item_id, expected_text):
         3,
         -1,
         100,
-    ]
+    ],
 )
 async def test_get_not_existing_item(service, item_id):
     with pytest.raises(QuoteNotFound):

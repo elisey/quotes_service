@@ -5,6 +5,7 @@ from abc import ABC, abstractmethod
 class QuoteNotFound(Exception):
     """Quote not found exception."""
 
+
 @dataclasses.dataclass
 class Quote:
     item_id: int
@@ -13,7 +14,7 @@ class Quote:
 
 class QuotesServiceInterface(ABC):
     @abstractmethod
-    def __init__(self):
+    def __init__(self) -> None:
         pass
 
     @abstractmethod
