@@ -1,4 +1,4 @@
-FROM python:3.10
+FROM python:3.11
 
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONIOENCODING UTF-8
@@ -18,7 +18,7 @@ RUN addgroup --gid $GID $USER && \
     usermod -aG sudo $USER && \
     echo "%sudo ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
     pip install --upgrade pip && \
-    pip install poetry==1.1.13 certifi && \
+    pip install poetry==1.5.1 certifi && \
     poetry config virtualenvs.create false && \
     poetry install --no-dev && \
     mkdir /data
