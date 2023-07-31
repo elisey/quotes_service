@@ -5,6 +5,7 @@ services:
         context: ''
         dockerfile: docker/Dockerfile
       container_name: quotes_service
+      restart: always
       networks:
         - vpc
 
