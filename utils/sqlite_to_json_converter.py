@@ -2,7 +2,7 @@ import json
 import sqlite3
 
 
-connection = sqlite3.connect("../data/quotes.db")
+connection = sqlite3.connect("../../data/quotes.db")
 cursor = connection.cursor()
 cursor.execute("select id, text from quotes;")
 result = cursor.fetchall()
@@ -19,5 +19,5 @@ for item in result:
     print(text)
     data[item_id] = text
 
-with open("../data/quotes.json", "w", encoding="utf8") as outfile:
+with open("../../data/quotes.json", "w", encoding="utf8") as outfile:
     json.dump(data, outfile, ensure_ascii=False)

@@ -8,13 +8,13 @@ load_dotenv()
 
 
 class Settings(BaseSettings):
-    PROJECT_NAME: str = "UGC API"
-    PROJECT_DESCRIPTION: str = "API для записи пользовательского контента"
+    PROJECT_NAME: str = "Quote API"
+    PROJECT_DESCRIPTION: str = "API for getting funny quotes"
     API_VERSION: str = "0.1.0"
 
     quotes_json_file_path: pathlib.Path = pathlib.Path("../data/quotes.json.gz")
 
-    class Config:  # noqa: WPS431
+    class ConfigDict:
         env_file = ".env"
 
 

@@ -1,11 +1,11 @@
 import pytest
 
-from service.quotes_service.implementation_memory import QuotesServiceMemory
-from service.quotes_service.interface import QuoteNotFound
+from quotes_service.service.quotes.implementation_memory import QuotesServiceMemory
+from quotes_service.service.quotes.interface import QuoteNotFound
 
 
 @pytest.fixture
-def service(test_quotes_dir):
+def service(test_quotes_dir) -> QuotesServiceMemory:
     service = QuotesServiceMemory(test_quotes_dir)
     yield service
 

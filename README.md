@@ -3,13 +3,11 @@
 ## How to run in docker
 
 ```shell
-cd src
 docker compose up --build -d
 ```
 
-## Run tests
+## Run tests and linters
 
 ```shell
-cd src
-make test
+task all
 ```

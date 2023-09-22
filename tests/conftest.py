@@ -15,12 +15,12 @@ def test_quotes_dir(fixture_dir) -> Path:
 
 
 @pytest.fixture
-def test_client(test_quotes_dir):
-    from core.config import settings
+def test_client(test_quotes_dir) -> TestClient:
+    from quotes_service.core.config import settings
 
     settings.quotes_json_file_path = test_quotes_dir
 
-    from main import app
+    from quotes_service.main import app
 
     client = TestClient(app)
     yield client

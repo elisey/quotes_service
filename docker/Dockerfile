@@ -24,7 +24,7 @@ RUN addgroup --gid $GID $USER && \
     mkdir /data
 
 
-COPY app /project/app
+COPY quotes_service /project/app
 COPY data/quotes.json.gz /data
 
 COPY docker/entrypoint.sh /entrypoint.sh

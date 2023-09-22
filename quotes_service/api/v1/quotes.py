@@ -6,9 +6,9 @@ from fastapi import APIRouter, Depends
 from pydantic import BaseModel
 from starlette.responses import JSONResponse
 
-from core.config import settings
-from service.quotes_service.implementation_memory import QuotesServiceMemory
-from service.quotes_service.interface import QuoteNotFound, QuotesServiceInterface
+from quotes_service.core.config import settings
+from quotes_service.service.quotes.implementation_memory import QuotesServiceMemory
+from quotes_service.service.quotes.interface import QuoteNotFound, QuotesServiceInterface
 
 
 router = APIRouter()
@@ -26,7 +26,7 @@ def get_quotes_service() -> QuotesServiceInterface:
 
 @router.get(
     "/{quote_id}",
-    summary="Получить цитату по ID",
+    summary="Get quote by id",
     response_model=QuoteResponse,
 )
 async def get_quote(

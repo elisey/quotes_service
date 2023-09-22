@@ -2,8 +2,8 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.responses import ORJSONResponse
 
-from api.v1 import quotes
-from core.config import settings
+from quotes_service.api.v1 import quotes
+from quotes_service.core.config import settings
 
 
 app = FastAPI(
