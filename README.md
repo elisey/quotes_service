@@ -3,6 +3,8 @@
 ## How to run in docker
 
 ```shell
+cp docker/prod.env.example docker/prod.env
+vim docker/prod.env
 docker compose up --build -d
 ```
 
