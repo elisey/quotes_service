@@ -1,15 +1,16 @@
 version: '3.9'
 services:
-  backend:
+  quote_api_backend:
       build:
         context: ''
         dockerfile: docker/Dockerfile
       container_name: quotes_service
       restart: always
       networks:
-        - vpc
-
+      - nginx-network
 
 networks:
-  vpc:
-    name: ithappens-bot-network
+  nginx-network:
+    external: true
+    name: nginx-network
+
