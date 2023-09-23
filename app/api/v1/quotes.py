@@ -6,9 +6,9 @@ from fastapi import APIRouter, Depends
 from pydantic import BaseModel
 from starlette.responses import JSONResponse
 
-from quotes_service.core.config import settings
-from quotes_service.service.quotes.implementation_memory import QuotesServiceMemory
-from quotes_service.service.quotes.interface import QuoteNotFound, QuotesServiceInterface
+from app.core.config import settings
+from app.service.quotes.implementation_memory import QuotesServiceMemory
+from app.service.quotes.interface import QuoteNotFound, QuotesServiceInterface
 
 
 router = APIRouter()

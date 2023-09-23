@@ -36,7 +36,7 @@ target_version = ['py311']
 profile = "django"
 lines_after_imports = 2
 line_length = 120
-src_paths = ["quotes_service"]
+src_paths = ["app"]
 
 [tool.ruff]
 line-length = 120

@@ -1,7 +1,7 @@
 import pytest
 
-from quotes_service.service.quotes.implementation_memory import QuotesServiceMemory
-from quotes_service.service.quotes.interface import QuoteNotFound
+from app.service.quotes.implementation_memory import QuotesServiceMemory
+from app.service.quotes.interface import QuoteNotFound
 
 
 @pytest.fixture
